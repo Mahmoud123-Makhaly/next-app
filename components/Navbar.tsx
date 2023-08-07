@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Search from "./Search";
 
 const Navbar = () => {
   return (
@@ -27,22 +28,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link href={"/productList"} className="nav-link" >
+              <Link href={"/productList"} className="nav-link">
                 List
               </Link>
             </li>
           </ul>
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+          <Search title="Search" placeholder="Search" />
         </div>
       </div>
     </nav>
